@@ -24,9 +24,13 @@
     - [分布式](base/notes/note_list.md)
 
 ----
+##  工具
+* [git使用](base/notes/git_note.md)
+
+----
+
 ##  网络
 * [HTTP协议](base/notes/http_info.md)
-
 ----
 ##  爬虫
 * [抓包工具](base/notes/note_list.md)
@@ -59,7 +63,7 @@
     >分布式
 
     >可伸缩性
-    
+
     >性能和有效性
 
     >质量
