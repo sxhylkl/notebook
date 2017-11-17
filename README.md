@@ -24,6 +24,14 @@
     * [基础语法](base/notes/note_list.md)
     * [性能测试](base/notes/note_list.md)
     * [性能优化](base/notes/note_list.md)
+
+----
+##  业务知识
+  * [游戏运营体系](base/notes/note_list.md)
+      - [AAA](base/notes/note_list.md)
+  * [游戏运营体系](base/notes/note_list.md)
+      - [AAA](base/notes/note_list.md)
+
 ----
 ##  算法
 * [机器学习](base/notes/note_list.md)
@@ -49,48 +57,10 @@
 * [抓包工具](base/notes/note_list.md)
   - [WireShark](base/notes/note_list.md)
   - [Fiddler](base/notes/note_list.md)
-* 爬虫步骤
+* [爬虫流程及框架](base/notes/note_list.md)
+    - [爬虫流程](base/notes/spiders/spiders_info.md)
+    - [Scrapy](base/notes/note_list.md)
 
-    >将种子URL放入队列
-
-    >从队列中获取URL，抓取内容。
-
-    >解析抓取内容，将需要进一步抓取的URL放入工作队列，存储解析后的内容
-* 爬虫策略
-
-    >深度优先
-
-    >广度优先
-
-    >PageRank
-
-    >大站优先策略
-* 如何去重
-
-    >Hash表
-
-    >bloom过滤器
-
-* 爬虫质量标准
-
-    >分布式
-
-    >可伸缩性
-
-    >性能和有效性
-
-    >质量
-
-    >新鲜性
-
-    >更新
-
-    >可扩展性
-* Robots规范与原则
-   >Robots协议（也称为爬虫协议、机器人协议等）的全称是“网络爬虫排除标准”（Robots Exclusion Protocol），网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。Robots协议的本质是网站和搜索引擎爬虫的沟通方式，用来指导搜索引擎更好地抓取网站内容，而不是作为搜索引擎之间互相限制和不正当竞争的工具。
-
-
-* [爬虫框架](base/notes/note_list.md)
 ----
 
 ## 读书笔记
