@@ -13,9 +13,14 @@
     * [网络编程](base/notes/note_list.md)
     * [并发编程](base/notes/note_list.md)
     * [测试与异常](base/notes/note_list.md)
+    * [元编程](base/notes/note_list.md)
     * [面向对象](base/notes/note_list.md)
-    * [Numpy模块](base/notes/note_list.md)
-    * [Pandas模块](base/notes/note_list.md)
+    * [设计模式](base/notes/note_list.md)
+       - [工厂模式](base/notes/note_list.md)
+       - [设计模式](base/notes/note_list.md)
+    * [Numpy](base/notes/note_list.md)
+    * [Pandas](base/notes/note_list.md)
+    * [Luigi](base/notes/note_list.md)
 * [Java ](base/notes/note_list.md)
     * [Java基础](base/notes/note_list.md)
 * [Scala](base/notes/note_list.md)
@@ -34,7 +39,10 @@
 
 ----
 ##  算法
-* [机器学习](base/notes/note_list.md)
+* [机器学习]()
+    - [简介](base/notes/note_list.md)
+    - [实现流程](base/notes/note_list.md)
+    - [深度学习](base/notes/note_list.md)
     - [深度学习](base/notes/note_list.md)
 
 * [深度学习](base/notes/note_list.md)
