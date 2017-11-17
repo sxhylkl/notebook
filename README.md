@@ -4,7 +4,7 @@
 
 ----
 ##  编程语言
-* [Python](base/notes/note_list.md)
+* #### Python
     * [数据结构](base/notes/note_list.md)
     * [字符串、文本](base/notes/note_list.md)
     * [日期](base/notes/note_list.md)
@@ -21,11 +21,11 @@
     * [Numpy](base/notes/note_list.md)
     * [Pandas](base/notes/note_list.md)
     * [Luigi](base/notes/note_list.md)
-* [Java ](base/notes/note_list.md)
+* #### Java
     * [Java基础](base/notes/note_list.md)
-* [Scala](base/notes/note_list.md)
+* #### Scala
     * [Scala语法](base/notes/note_list.md)
-* [SQL](base/notes/note_list.md)
+* #### SQL
     * [基础语法](base/notes/note_list.md)
     * [性能测试](base/notes/note_list.md)
     * [性能优化](base/notes/note_list.md)
@@ -39,13 +39,13 @@
 
 ----
 ##  算法
-* [机器学习]()
+ * #### 机器学习
     - [简介](base/notes/note_list.md)
     - [实现流程](base/notes/note_list.md)
     - [深度学习](base/notes/note_list.md)
     - [深度学习](base/notes/note_list.md)
 
-* [深度学习](base/notes/note_list.md)
+* #### 深度学习
     - [深度学习](base/notes/note_list.md)
 ----
 ##  架构
