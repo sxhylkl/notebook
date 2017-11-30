@@ -55,7 +55,6 @@
     * [Scala语法](base/notes/note_list.md)
 * #### C++
     * [C++语法](base/notes/note_list.md)  
-
 * #### SQL
     * [基础语法](base/notes/note_list.md)
     * [性能测试](base/notes/note_list.md)
