@@ -117,20 +117,3 @@
 ## MarkDown语法
 * [哲学](base/notes/note_list.md)
     - [辩证法](base/notes/note_list.md)
-    ```
-    # EEEEEEEEEEE
-    # SSSSSSSSSSSSSS
-
-    ```
-
-    ``` javascript
-    if (condition){
-    return true
-    }
-    ```
-
-    ``` python
-    #fa
-    def demo():
-        print '--'
-    ```
