@@ -49,6 +49,9 @@
     * [Luigi](base/notes/note_list.md)
 * #### Java
     * [Java基础](base/notes/note_list.md)
+        -  [数据结构]()
+          - [数组](base/notes/note_list.md)
+          - [集合](base/notes/note_list.md)
 * #### JavaScript
     * [JavaScript语法](base/notes/note_list.md)      
 * #### Scala
