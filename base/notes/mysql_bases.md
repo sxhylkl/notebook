@@ -185,28 +185,34 @@
 
   + ###### 触发器
   > 触发器是一种与表操作有关的数据库对象，当触发器所在表上出现指定事件时，将调用该对象，即表的操作事件触发表上的触发器的执行。
-
   > 简言之，修改一个表中的数据另外一个表中的数据也被修改，这就是触发器。
 
   ``` SQL
-  /* 表结构复制 */
-  create table a like b;
-  /* 表数据复制 */
-  insert into b select * from a;
+  /* 制作删除表t1后t2表中的记录也会跟着删除 */
+  mysql>\d//
+  mysql>create trigger tg2 before delete on t1 for ench row
+  >begin delete from t2 where id=old.id;
+  >end//
+  mysql>\d;
+  /* 制作更改表t1后t2表中的记录也跟着修改呢 */
+  mysql>\d//
+  mysql>create trigger tg3 before update on t1 each row
+  >begin update t2 set id=new.id where id=old.id;
+  >end//
+  mysql>\d;
+  /* 查看触发器 */
+  mysql>show triggers;
   ```
 
   + ###### 重排auto_increment值
 
   ``` SQL
-  /* 表结构复制 */
-  create table a like b;
-  /* 表数据复制 */
-  insert into b select * from a;
+  /* MySQL数据库自动增长的ID如何恢复
+  清空表的时候不能用delete from table_name;
+  而是要用 truncate table table_name;
+  这样auto_increment就恢复成1了
+   */
+  truncate table table_name;
+  /* 或者清空内容后直接用alter命令修改表 */
+  alter table table_name auto_increment=1;
   ```
-
-----
-#### MySQL性能优化思路
-  - SQL语言优化
-  - myISAM表锁优化
-  - 数据库优化
-  - 服务器优化
