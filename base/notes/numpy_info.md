@@ -1,67 +1,94 @@
-生成目录的方法:
+### Numpy的使用手册
+---
+<font size=4>[1.创建数据](#1)</font><br>
+<font size=4>[2.I/O操作](#2)</font><br>
+<font size=4>[3.数据类型](#3)</font><br>
+<font size=4>[4.帮助](#4)</font><br>
+<font size=4>[5.数组的数学方法](#5)</font><br>
+<font size=4>[6.数组的复制](#6)</font><br>
+<font size=4>[7.数组的排序](#7)</font><br>
+<font size=4>[8.子集构造、切片、索引](#8)</font><br>
+<font size=4>[9.数组的操作](#9)</font><br>
 
-* [1.语法示例](#1)
+---
 
-* [1.1图片](#1.1)
+<h4 id="1">1.创建数据</h4>
 
-* [1.2换行](#1.2)
+  - 创建数组
 
-* [1.3强调](#1.3)
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-生成效果:
+<h4 id="2">2.I/O操作</h4>
 
-1.语法示例
-1.1图片
-1.2换行
-1.3强调
-在正文中，只要将章节标题的id对应上去即可:
+  - 创建数组
 
-<h2 id="1">1.语法示例</h2>
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-这是第一段
+<h4 id="3">3.数据类型</h4>
 
-这是第一段
+  - 创建数组
 
-这是第一段
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-这是第一段
+<h4 id="4">4.帮助</h4>
 
-这是第一段
+  - 创建数组
 
-<h3 id="1.1">1.1图片</h3>
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-这是第一段第一节
+<h4 id="5">5.数组的数学方法</h4>
 
-这是第一段第一节
+  - 创建数组
 
-这是第一段第一节
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-这是第一段第一节
+<h4 id="6">6.数组的复制</h4>
 
-这是第一段第一节
+  - 创建数组
 
-<h3 id="1.2">1.2换行</h3>
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-这是第一段第二节
+<h4 id="7">7.数组的排序</h4>
 
-这是第一段第二节
+  - 创建数组
 
-这是第一段第二节
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-这是第一段第二节
+<h4 id="8">8.子集构造、切片、索引</h4>
 
-这是第一段第二节
+  - 创建数组
 
-<h3 id="1.1">1.3强调</h3>
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
 
-这是第一段第三节
+<h4 id="9">9.数组的操作</h4>
 
-这是第一段第三节
+- 创建数组
 
-这是第一段第三节
-
-这是第一段第三节
-
-这是第一段第三节
-
-生成效果:
+```python
+brew install 软件名
+import numpy as np
+```

@@ -1,55 +1,94 @@
-## Pandas模块
-> Pandas进行数据分析与统计
+### Numpy的使用手册
+---
+<font size=4>[1.创建数据](#1)</font><br>
+<font size=4>[2.I/O操作](#2)</font><br>
+<font size=4>[3.数据类型](#3)</font><br>
+<font size=4>[4.帮助](#4)</font><br>
+<font size=4>[5.数组的数学方法](#5)</font><br>
+<font size=4>[6.数组的复制](#6)</font><br>
+<font size=4>[7.数组的排序](#7)</font><br>
+<font size=4>[8.子集构造、切片、索引](#8)</font><br>
+<font size=4>[9.数组的操作](#9)</font><br>
 
 ---
-#### 1、数据结构简介：DataFrame和Series
 
-``` python
-#fa
-import pandas as pd
+<h4 id="1">1.创建数据</h4>
 
-def demo():
-    print '--'
-```
----
-#### 2、利用pandas查询数据
-``` python
-#fa
-def demo():
-    print '--'
-```
----
-#### 3、利用pandas的DataFrames进行统计分析
-``` python
-#fa
-def demo():
-    print '--'
-```
----
-#### 4、利用pandas实现SQL操作
-``` python
-#fa
-def demo():
-    print '--'
-```
----
-#### 5、利用pandas进行缺失值的处理
-``` python
-#fa
-def demo():
-    print '--'
-```
----
-#### 6、利用pandas实现Excel的数据透视表功能
-``` python
-#fa
-def demo():
-    print '--'
-```
----
-#### 7、索引及多层索引的使用
-``` python
-#fa
-def demo():
-    print '--'
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="2">2.I/O操作</h4>
+
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="3">3.数据类型</h4>
+
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="4">4.帮助</h4>
+
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="5">5.数组的数学方法</h4>
+
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="6">6.数组的复制</h4>
+
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="7">7.数组的排序</h4>
+
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="8">8.子集构造、切片、索引</h4>
+
+  - 创建数组
+
+  ```python
+  brew install 软件名
+  import numpy as np
+  ```
+
+<h4 id="9">9.数组的操作</h4>
+
+- 创建数组
+
+```python
+brew install 软件名
+import numpy as np
 ```
