@@ -16,16 +16,20 @@
     * Flask
     * Celery
     * Luigi
+    * 微服务
     * 流畅的Python
     * Python学习手册
     * Python Cookbook
 
 * #### Java
     * Java基础
-        -  数据结构
-          - 数组
-          - 集合
     * 设计模式
+    * Spring
+    * SpringMVC
+    * Mybaits
+    * SpringCloud
+    * Springboot
+    * 架构
 * #### JavaScript
     * 基本语法
     * 设计模式
