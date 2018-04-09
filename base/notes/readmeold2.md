@@ -3,7 +3,10 @@
 
 ##  编程语言及架构
 * #### Python
-    * [Numpy](base/notes/numpy_info.md)
+    * 数据结构
+    * 面向对象编程   
+    * 设计模式
+    * Numpy
     * Pandas
     * Scikit-Learn
     * Scipy
