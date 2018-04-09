@@ -5,7 +5,7 @@
     * [Numpy](base/notes/numpy_info.md)
     * [Pandas](base/notes/pandas_info.md)
     * [Scikit-Learn](base/notes/sklearn_info.md)
-    * Scipy
+    * [Scipy](base/notes/scipy_info.md)
     * Matplotlib
     * Django
     * Tornado
