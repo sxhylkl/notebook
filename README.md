@@ -4,7 +4,7 @@
 * #### Python
     * [Numpy](base/notes/numpy_info.md)
     * [Pandas](base/notes/pandas_info.md)
-    * Scikit-Learn
+    * [Scikit-Learn](base/notes/sklearn_info.md)
     * Scipy
     * Matplotlib
     * Django
