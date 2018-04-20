@@ -2,7 +2,7 @@
 
 ##  编程语言及架构
 * #### Python
-    * [Jupyter](base/notes/Jupytetr_info.md)
+    * [Jupyter](base/notes/Jupyter_info.md)
     * [Numpy](base/notes/numpy_info.md)
     * [Pandas](base/notes/pandas_info.md)
     * [Scikit-Learn](base/notes/sklearn_info.md)
