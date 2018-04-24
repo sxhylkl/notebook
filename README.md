@@ -6,6 +6,7 @@
     * [Numpy](base/notes/numpy_info.md)
     * [Pandas](base/notes/pandas_info.md)
     * [Scikit-Learn](base/notes/sklearn_info.md)
+    * [Scikit-Learn-0.19](base/notes/scikit-learn_0.19_info.md)
     * [Scipy](base/notes/scipy_info.md)
     * [Matplotlib](base/notes/matplotlib_info.md)
     * Django
