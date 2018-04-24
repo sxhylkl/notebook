@@ -42,148 +42,467 @@
 
 <h4 id="1">1.sklearn.base: 基类和实用函数</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - Base classes for all estimators.
+
+  - 基类
+
+  ```python
+  base.BaseEstimator # Base class for all estimators in scikit-learn
+  base.ClassifierMixin	# Mixin class for all classifiers in scikit-learn.
+  base.ClusterMixin	# Mixin class for all cluster estimators in scikit-learn.
+  base.RegressorMixin	# Mixin class for all regression estimators in scikit-learn.
+  base.TransformerMixin	# Mixin class for all transformers in scikit-learn.
+  ```
+  - 基类
+  ```python
+  base.clone(estimator[, safe])	# Constructs a new estimator with the same parameters.
+  config_context(*args, **kwds)	# Context manager for global scikit-learn configuration
+  get_config()	# Retrieve current values for configuration set by set_config
+  set_config([assume_finite])	# Set global scikit-learn configuration
+  ```
 
 <h4 id="2">2.sklearn.calibration: 概率检验</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - Calibration of predicted probabilities.
+  ```python
+  calibration.CalibratedClassifierCV([…])	# Probability calibration with isotonic regression or sigmoid.
+  calibration.calibration_curve(y_true, y_prob)	# Compute true and predicted probabilities for a calibration curve.
+  ```
 
 <h4 id="3">3.sklearn.cluster: 聚类</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.cluster module gathers popular unsupervised clustering algorithms.
+  -  类
+  ```python
+  cluster.AffinityPropagation([damping, …])	# Perform Affinity Propagation Clustering of data.
+  cluster.AgglomerativeClustering([…])	# Agglomerative Clustering
+  cluster.Birch([threshold, branching_factor, …])	# Implements the Birch clustering algorithm.
+  cluster.DBSCAN([eps, min_samples, metric, …])	# Perform DBSCAN clustering from vector array or distance matrix.
+  cluster.FeatureAgglomeration([n_clusters, …])	# Agglomerate features.
+  cluster.KMeans([n_clusters, init, n_init, …])	# K-Means clustering
+  cluster.MiniBatchKMeans([n_clusters, init, …])	# Mini-Batch K-Means clustering
+  cluster.MeanShift([bandwidth, seeds, …])	# Mean shift clustering using a flat kernel.
+  cluster.SpectralClustering([n_clusters, …])	# Apply clustering to a projection to the normalized laplacian.
+  ```
+  -  函数
+  ```python
+  cluster.affinity_propagation(S[, …])	# Perform Affinity Propagation Clustering of data
+  cluster.dbscan(X[, eps, min_samples, …])	# Perform DBSCAN clustering from vector array or distance matrix.
+  cluster.estimate_bandwidth(X[, quantile, …])	# Estimate the bandwidth to use with the mean-shift algorithm.
+  cluster.k_means(X, n_clusters[, init, …])	# K-means clustering algorithm.
+  cluster.mean_shift(X[, bandwidth, seeds, …])	# Perform mean shift clustering of data using a flat kernel.
+  cluster.spectral_clustering(affinity[, …])	# Apply clustering to a projection to the normalized laplacian.
+  cluster.ward_tree(X[, connectivity, …])	# Ward clustering based on a Feature matrix.
+  ```
 
 <h4 id="4">4.sklearn.cluster.bicluster: 双向聚类</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - Spectral biclustering algorithms.
+  - 类
+  ```python
+  SpectralBiclustering([n_clusters, method, …])	# Spectral biclustering (Kluger, 2003).
+  SpectralCoclustering([n_clusters, …])	# Spectral Co-Clustering algorithm (Dhillon, 2001).
+  ```
 
 <h4 id="5">5.sklearn.covariance: 协方差估计</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - 类
+  ```python
+  covariance.EmpiricalCovariance([…])	# Maximum likelihood covariance estimator
+  covariance.EllipticEnvelope([…])	# An object for detecting outliers in a Gaussian distributed dataset.
+  covariance.GraphLasso([alpha, mode, tol, …])	# Sparse inverse covariance estimation with an l1-penalized estimator.
+  covariance.GraphLassoCV([alphas, …])	# Sparse inverse covariance w/ cross-validated choice of the l1 penalty
+  covariance.LedoitWolf([store_precision, …])	# LedoitWolf Estimator
+  covariance.MinCovDet([store_precision, …])	# Minimum Covariance Determinant (MCD): robust estimator of covariance.
+  covariance.OAS([store_precision, …])	# Oracle Approximating Shrinkage Estimator
+  covariance.ShrunkCovariance([…])	# Covariance estimator with shrinkage
+  covariance.empirical_covariance(X[, …])	# Computes the Maximum likelihood covariance estimator
+  covariance.graph_lasso(emp_cov, alpha[, …])	# l1-penalized covariance estimator
+  covariance.ledoit_wolf(X[, assume_centered, …])	# Estimates the shrunk Ledoit-Wolf covariance matrix.
+  covariance.oas(X[, assume_centered])	# Estimate covariance with the Oracle Approximating Shrinkage algorithm.
+  covariance.shrunk_covariance(emp_cov[, …])	# Calculates a covariance matrix shrunk on the diagonal
+  ```
 
 <h4 id="6">6.sklearn.cross_decomposition: 交叉分解</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - 类
+  ```python
+  cross_decomposition.CCA([n_components, …])	# CCA Canonical Correlation Analysis.
+  cross_decomposition.PLSCanonical([…])	# PLSCanonical implements the 2 blocks canonical PLS of the original Wold algorithm [Tenenhaus 1998] p.204, referred as PLS-C2A in [Wegelin 2000].
+  cross_decomposition.PLSRegression([…])	# PLS regression
+  cross_decomposition.PLSSVD([n_components, …])	# Partial Least Square SVD
+  ```
 
 <h4 id="7">7.sklearn.datasets: 数据集</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.datasets module includes utilities to load datasets, including methods to load and fetch popular reference datasets. It also features some artificial data generators.
+
+  - 数据装载
+
+  ```python
+  datasets.clear_data_home([data_home])	# Delete all the content of the data home cache.
+  datasets.dump_svmlight_file(X, y, f[, …])	# Dump the dataset in svmlight / libsvm file format.
+  datasets.fetch_20newsgroups([data_home, …])	# Load the filenames and data from the 20 newsgroups dataset.
+  datasets.fetch_20newsgroups_vectorized([…])	# Load the 20 newsgroups dataset and transform it into tf-idf vectors.
+  datasets.fetch_california_housing([…])	# Loader for the California housing dataset from StatLib.
+  datasets.fetch_covtype([data_home, …])	# Load the covertype dataset, downloading it if necessary.
+  datasets.fetch_kddcup99([subset, data_home, …])	# Load and return the kddcup 99 dataset (classification).
+  datasets.fetch_lfw_pairs([subset, …])	# Loader for the Labeled Faces in the Wild (LFW) pairs dataset
+  datasets.fetch_lfw_people([data_home, …])	# Loader for the Labeled Faces in the Wild (LFW) people dataset
+  datasets.fetch_mldata(dataname[, …])	# Fetch an mldata.org data set
+  datasets.fetch_olivetti_faces([data_home, …])	# Loader for the Olivetti faces data-set from AT&T.
+  datasets.fetch_rcv1([data_home, subset, …])	# Load the RCV1 multilabel dataset, downloading it if necessary.
+  datasets.fetch_species_distributions([…])	# Loader for species distribution dataset from Phillips et.
+  datasets.get_data_home([data_home])	# Return the path of the scikit-learn data dir.
+  datasets.load_boston([return_X_y])	# Load and return the boston house-prices dataset (regression).
+  datasets.load_breast_cancer([return_X_y])	# Load and return the breast cancer wisconsin dataset (classification).
+  datasets.load_diabetes([return_X_y])	# Load and return the diabetes dataset (regression).
+  datasets.load_digits([n_class, return_X_y])	# Load and return the digits dataset (classification).
+  datasets.load_files(container_path[, …])	# Load text files with categories as subfolder names.
+  datasets.load_iris([return_X_y])	# Load and return the iris dataset (classification).
+  datasets.load_linnerud([return_X_y])	# Load and return the linnerud dataset (multivariate regression).
+  datasets.load_mlcomp(*args, **kwargs)	# DEPRECATED: since the http://mlcomp.org/ website will shut down in March 2017, the load_mlcomp function was deprecated in version 0.19 and will be removed in 0.21.
+  datasets.load_sample_image(image_name)	# Load the numpy array of a single sample image
+  datasets.load_sample_images()	# Load sample images for image manipulation.
+  datasets.load_svmlight_file(f[, n_features, …])	# Load datasets in the svmlight / libsvm format into sparse CSR matrix
+  datasets.load_svmlight_files(files[, …])	# Load dataset from multiple files in SVMlight format
+  datasets.load_wine([return_X_y])	# Load and return the wine dataset (classification).
+  datasets.mldata_filename(dataname)	# Convert a raw name for a data set in a mldata.org filename.
+  ```
+  - 样品生成
+  ```python
+  datasets.make_biclusters(shape, n_clusters)	# Generate an array with constant block diagonal structure for biclustering.
+  datasets.make_blobs([n_samples, n_features, …])	# Generate isotropic Gaussian blobs for clustering.
+  datasets.make_checkerboard(shape, n_clusters)	# Generate an array with block checkerboard structure for biclustering.
+  datasets.make_circles([n_samples, shuffle, …])	# Make a large circle containing a smaller circle in 2d.
+  datasets.make_classification([n_samples, …])	# Generate a random n-class classification problem.
+  datasets.make_friedman1([n_samples, …])	# Generate the “Friedman #1” regression problem
+  datasets.make_friedman2([n_samples, noise, …])	# Generate the “Friedman #2” regression problem
+  datasets.make_friedman3([n_samples, noise, …])	# Generate the “Friedman #3” regression problem
+  datasets.make_gaussian_quantiles([mean, …])	# Generate isotropic Gaussian and label samples by quantile
+  datasets.make_hastie_10_2([n_samples, …])	# Generates data for binary classification used in Hastie et al.
+  datasets.make_low_rank_matrix([n_samples, …])	# Generate a mostly low rank matrix with bell-shaped singular values
+  datasets.make_moons([n_samples, shuffle, …])	# Make two interleaving half circles
+  datasets.make_multilabel_classification([…])	# Generate a random multilabel classification problem.
+  datasets.make_regression([n_samples, …])	# Generate a random regression problem.
+  datasets.make_s_curve([n_samples, noise, …])	# Generate an S curve dataset.
+  datasets.make_sparse_coded_signal(n_samples, …)	# Generate a signal as a sparse combination of dictionary elements.
+  datasets.make_sparse_spd_matrix([dim, …])	# Generate a sparse symmetric definite positive matrix.
+  datasets.make_sparse_uncorrelated([…])	# Generate a random regression problem with sparse uncorrelated design
+  datasets.make_spd_matrix(n_dim[, random_state])	# Generate a random symmetric, positive-definite matrix.
+  datasets.make_swiss_roll([n_samples, noise, …])	# Generate a swiss roll dataset.
+  ```
 
 <h4 id="8">8.sklearn.decomposition: 矩阵分解</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - 类
+  ```python
+  decomposition.DictionaryLearning([…])	Dictionary learning
+  decomposition.FactorAnalysis([n_components, …])	Factor Analysis (FA)
+  decomposition.FastICA([n_components, …])	FastICA: a fast algorithm for Independent Component Analysis.
+  decomposition.IncrementalPCA([n_components, …])	Incremental principal components analysis (IPCA).
+  decomposition.KernelPCA([n_components, …])	Kernel Principal component analysis (KPCA)
+  decomposition.LatentDirichletAllocation([…])	Latent Dirichlet Allocation with online variational Bayes algorithm
+  decomposition.MiniBatchDictionaryLearning([…])	Mini-batch dictionary learning
+  decomposition.MiniBatchSparsePCA([…])	Mini-batch Sparse Principal Components Analysis
+  decomposition.NMF([n_components, init, …])	Non-Negative Matrix Factorization (NMF)
+  decomposition.PCA([n_components, copy, …])	Principal component analysis (PCA)
+  decomposition.SparsePCA([n_components, …])	Sparse Principal Components Analysis (SparsePCA)
+  decomposition.SparseCoder(dictionary[, …])	Sparse coding
+  decomposition.TruncatedSVD([n_components, …])	Dimensionality reduction using truncated SVD (aka LSA).
+  decomposition.dict_learning(X, n_components, …)	Solves a dictionary learning matrix factorization problem.
+  decomposition.dict_learning_online(X[, …])	Solves a dictionary learning matrix factorization problem online.
+  decomposition.fastica(X[, n_components, …])	Perform Fast Independent Component Analysis.
+  decomposition.sparse_encode(X, dictionary[, …])	Sparse coding
+  ```
 
 <h4 id="9">9.sklearn.discriminant_analysis: 判别分析</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - Linear Discriminant Analysis and Quadratic Discriminant Analysis
+
+  - 类
+
+  ```python
+  discriminant_analysis.LinearDiscriminantAnalysis([…])	Linear Discriminant Analysis
+  discriminant_analysis.QuadraticDiscriminantAnalysis([…])	Quadratic Discriminant Analysis
+  ```
 
 <h4 id="10">10.sklearn.dummy: 虚拟估计器</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - 类
+
+  ```python
+  dummy.DummyClassifier([strategy, …])	# DummyClassifier is a classifier that makes predictions using simple rules.
+  dummy.DummyRegressor([strategy, constant, …])	# DummyRegressor is a regressor that makes predictions using simple rules.
+  ```
 
 <h4 id="11">11.sklearn.ensemble: 集成方法</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.ensemble module includes ensemble-based methods for classification, regression and anomaly detection.
+
+  ```python
+  ensemble.AdaBoostClassifier([…])	An AdaBoost classifier.
+  ensemble.AdaBoostRegressor([base_estimator, …])	An AdaBoost regressor.
+  ensemble.BaggingClassifier([base_estimator, …])	A Bagging classifier.
+  ensemble.BaggingRegressor([base_estimator, …])	A Bagging regressor.
+  ensemble.ExtraTreesClassifier([…])	An extra-trees classifier.
+  ensemble.ExtraTreesRegressor([n_estimators, …])	An extra-trees regressor.
+  ensemble.GradientBoostingClassifier([loss, …])	Gradient Boosting for classification.
+  ensemble.GradientBoostingRegressor([loss, …])	Gradient Boosting for regression.
+  ensemble.IsolationForest([n_estimators, …])	Isolation Forest Algorithm
+  ensemble.RandomForestClassifier([…])	A random forest classifier.
+  ensemble.RandomForestRegressor([…])	A random forest regressor.
+  ensemble.RandomTreesEmbedding([…])	An ensemble of totally random trees.
+  ensemble.VotingClassifier(estimators[, …])	Soft Voting/Majority Rule classifier for unfitted estimators.
+  ```
+  - Partial dependence plots for tree ensembles.
+
+  ```python
+  ensemble.partial_dependence.partial_dependence(…)	Partial dependence of target_variables.
+  ensemble.partial_dependence.plot_partial_dependence(…)	Partial dependence plots for features.
+  ```
 
 <h4 id="12">12.sklearn.exceptions: 异常和警告</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.exceptions module includes all custom warnings and error classes used across scikit-learn.
+
+  ```python
+  exceptions.ChangedBehaviorWarning	# Warning class used to notify the user of any change in the behavior.
+  exceptions.ConvergenceWarning	# Custom warning to capture convergence problems
+  exceptions.DataConversionWarning	# Warning used to notify implicit data conversions happening in the code.
+  exceptions.DataDimensionalityWarning	# Custom warning to notify potential issues with data dimensionality.
+  exceptions.EfficiencyWarning	# Warning used to notify the user of inefficient computation.
+  exceptions.FitFailedWarning	# Warning class used if there is an error while fitting the estimator.
+  exceptions.NotFittedError	# Exception class to raise if estimator is used before fitting.
+  exceptions.NonBLASDotWarning	# Warning used when the dot operation does not use BLAS.
+  exceptions.UndefinedMetricWarning	# Warning used when the metric is invalid
+  ```
 
 <h4 id="13">13.sklearn.feature_extraction: 特征提取</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.feature_extraction module deals with feature extraction from raw data. It currently includes methods to extract features from text and images.
+
+  ```python
+  feature_extraction.DictVectorizer([dtype, …])	# Transforms lists of feature-value mappings to vectors.
+  feature_extraction.FeatureHasher([…])	# Implements feature hashing, aka the hashing trick.
+  ```
+  - 图像特征提取
+
+  ```python
+  feature_extraction.image.extract_patches_2d(…)	# Reshape a 2D image into a collection of patches
+  feature_extraction.image.grid_to_graph(n_x, n_y)	# Graph of the pixel-to-pixel connections
+  feature_extraction.image.img_to_graph(img[, …])	# Graph of the pixel-to-pixel gradient connections
+  feature_extraction.image.reconstruct_from_patches_2d(…)	# Reconstruct the image from all of its patches.
+  feature_extraction.image.PatchExtractor([…])	# Extracts patches from a collection of images
+  ```
+  - 文本特征提取
+
+  ```python
+  feature_extraction.text.CountVectorizer([…])	# Convert a collection of text documents to a matrix of token counts
+  feature_extraction.text.HashingVectorizer([…])	# Convert a collection of text documents to a matrix of token occurrences
+  feature_extraction.text.TfidfTransformer([…])	# Transform a count matrix to a normalized tf or tf-idf representation
+  feature_extraction.text.TfidfVectorizer([…])	# Convert a collection of raw documents to a matrix of TF-IDF features.
+  ```
 
 <h4 id="14">14.sklearn.feature_selection: 特征选择</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.feature_selection module implements feature selection algorithms. It currently includes univariate filter selection methods and the recursive feature elimination algorithm.
+
+  ```python
+  feature_selection.GenericUnivariateSelect([…])	# Univariate feature selector with configurable strategy.
+  feature_selection.SelectPercentile([…])	# Select features according to a percentile of the highest scores.
+  feature_selection.SelectKBest([score_func, k])	# Select features according to the k highest scores.
+  feature_selection.SelectFpr([score_func, alpha])	# Filter: Select the pvalues below alpha based on a FPR test.
+  feature_selection.SelectFdr([score_func, alpha])	# Filter: Select the p-values for an estimated false discovery rate
+  feature_selection.SelectFromModel(estimator)	# Meta-transformer for selecting features based on importance weights.
+  feature_selection.SelectFwe([score_func, alpha])	# Filter: Select the p-values corresponding to Family-wise error rate
+  feature_selection.RFE(estimator[, …])	# Feature ranking with recursive feature elimination.
+  feature_selection.RFECV(estimator[, step, …])	# Feature ranking with recursive feature elimination and cross-validated selection of the best number of features.
+  feature_selection.VarianceThreshold([threshold])	# Feature selector that removes all low-variance features.
+  feature_selection.chi2(X, y)	# Compute chi-squared stats between each non-negative feature and class.
+  feature_selection.f_classif(X, y)	# Compute the ANOVA F-value for the provided sample.
+  feature_selection.f_regression(X, y[, center])	# Univariate linear regression tests.
+  feature_selection.mutual_info_classif(X, y)	# Estimate mutual information for a discrete target variable.
+  feature_selection.mutual_info_regression(X, y)	# Estimate mutual information for a continuous target variable.
+  ```
 
 <h4 id="15">15.sklearn.gaussian_process: 高斯过程</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.gaussian_process module implements Gaussian Process based regression and classification.
+
+  ```python
+  gaussian_process.GaussianProcessClassifier([…])	# Gaussian process classification (GPC) based on Laplace approximation.
+  gaussian_process.GaussianProcessRegressor([…])	# Gaussian process regression (GPR).
+  ```
+  - 核函数
+  ```python
+  gaussian_process.kernels.CompoundKernel(kernels)	# Kernel which is composed of a set of other kernels.
+  gaussian_process.kernels.ConstantKernel([…])	# Constant kernel.
+  gaussian_process.kernels.DotProduct([…])	# Dot-Product kernel.
+  gaussian_process.kernels.ExpSineSquared([…])	# Exp-Sine-Squared kernel.
+  gaussian_process.kernels.Exponentiation(…)	# Exponentiate kernel by given exponent.
+  gaussian_process.kernels.Hyperparameter	# A kernel hyperparameter’s specification in form of a namedtuple.
+  gaussian_process.kernels.Kernel	# Base class for all kernels.
+  gaussian_process.kernels.Matern([…])	# Matern kernel.
+  gaussian_process.kernels.PairwiseKernel([…])	# Wrapper for kernels in sklearn.metrics.pairwise.
+  gaussian_process.kernels.Product(k1, k2)	# Product-kernel k1 * k2 of two kernels k1 and k2.
+  gaussian_process.kernels.RBF([length_scale, …])	# Radial-basis function kernel (aka squared-exponential kernel).
+  gaussian_process.kernels.RationalQuadratic([…])	# Rational Quadratic kernel.
+  gaussian_process.kernels.Sum(k1, k2)	# Sum-kernel k1 + k2 of two kernels k1 and k2.
+  gaussian_process.kernels.WhiteKernel([…])	# White kernel.
+  ```
 
 <h4 id="16">16.sklearn.isotonic: 保序回归</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - 类
+
+  ```python
+  isotonic.IsotonicRegression([y_min, y_max, …])	Isotonic regression model.
+  isotonic.check_increasing(x, y)	Determine whether y is monotonically correlated with x.
+  isotonic.isotonic_regression(y[, …])	Solve the isotonic regression model:
+  ```
 
 <h4 id="17">17.sklearn.kernel_approximation 核近似</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+   - The sklearn.kernel_approximation module implements several approximate kernel feature maps base on Fourier transforms.
+  ```python
+  kernel_approximation.AdditiveChi2Sampler([…])	# Approximate feature map for additive chi2 kernel.
+  kernel_approximation.Nystroem([kernel, …])	# Approximate a kernel map using a subset of the training data.
+  kernel_approximation.RBFSampler([gamma, …])	# Approximates feature map of an RBF kernel by Monte Carlo approximation of its Fourier transform.
+  kernel_approximation.SkewedChi2Sampler([…])	# Approximates feature map of the “skewed chi-squared” kernel by Monte Carlo approximation of its Fourier transform.
+  ```
 
 <h4 id="18">18.sklearn.kernel_ridge 内核岭回归</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - Module sklearn.kernel_ridge implements kernel ridge regression.
+
+  ```python
+  kernel_ridge.KernelRidge([alpha, kernel, …])	# Kernel ridge regression.
+  ```
 <h4 id="19">19.sklearn.linear_model: 广义线性模型</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.linear_model module implements generalized linear models. It includes Ridge regression, Bayesian Regression, Lasso and Elastic Net estimators computed with Least Angle Regression and coordinate descent. It also implements Stochastic Gradient Descent related algorithms.
+  ```python
+  linear_model.ARDRegression([n_iter, tol, …])	# Bayesian ARD regression.
+  linear_model.BayesianRidge([n_iter, tol, …])	# Bayesian ridge regression
+  linear_model.ElasticNet([alpha, l1_ratio, …])	# Linear regression with combined L1 and L2 priors as regularizer.
+  linear_model.ElasticNetCV([l1_ratio, eps, …])	# Elastic Net model with iterative fitting along a regularization path
+  linear_model.HuberRegressor([epsilon, …])	# Linear regression model that is robust to outliers.
+  linear_model.Lars([fit_intercept, verbose, …])	# Least Angle Regression model a.k.a.
+  linear_model.LarsCV([fit_intercept, …])	# Cross-validated Least Angle Regression model
+  linear_model.Lasso([alpha, fit_intercept, …])	# Linear Model trained with L1 prior as regularizer (aka the Lasso)
+  linear_model.LassoCV([eps, n_alphas, …])	# Lasso linear model with iterative fitting along a regularization path
+  linear_model.LassoLars([alpha, …])	# Lasso model fit with Least Angle Regression a.k.a.
+  linear_model.LassoLarsCV([fit_intercept, …])	# Cross-validated Lasso, using the LARS algorithm
+  linear_model.LassoLarsIC([criterion, …])	# Lasso model fit with Lars using BIC or AIC for model selection
+  linear_model.LinearRegression([…])	# Ordinary least squares Linear Regression.
+  linear_model.LogisticRegression([penalty, …])	# Logistic Regression (aka logit, MaxEnt) classifier.
+  linear_model.LogisticRegressionCV([Cs, …])	# Logistic Regression CV (aka logit, MaxEnt) classifier.
+  linear_model.MultiTaskLasso([alpha, …])	# Multi-task Lasso model trained with L1/L2 mixed-norm as regularizer
+  linear_model.MultiTaskElasticNet([alpha, …])	# Multi-task ElasticNet model trained with L1/L2 mixed-norm as regularizer
+  linear_model.MultiTaskLassoCV([eps, …])	# Multi-task L1/L2 Lasso with built-in cross-validation.
+  linear_model.MultiTaskElasticNetCV([…])	# Multi-task L1/L2 ElasticNet with built-in cross-validation.
+  linear_model.OrthogonalMatchingPursuit([…])	# Orthogonal Matching Pursuit model (OMP)
+  linear_model.OrthogonalMatchingPursuitCV([…])	# Cross-validated Orthogonal Matching Pursuit model (OMP)
+  linear_model.PassiveAggressiveClassifier([…])	# Passive Aggressive Classifier
+  linear_model.PassiveAggressiveRegressor([C, …])	# Passive Aggressive Regressor
+  linear_model.Perceptron([penalty, alpha, …])	# Read more in the User Guide.
+  linear_model.RANSACRegressor([…])	# RANSAC (RANdom SAmple Consensus) algorithm.
+  linear_model.Ridge([alpha, fit_intercept, …])	# Linear least squares with l2 regularization.
+  linear_model.RidgeClassifier([alpha, …])	# Classifier using Ridge regression.
+  linear_model.RidgeClassifierCV([alphas, …])	# Ridge classifier with built-in cross-validation.
+  linear_model.RidgeCV([alphas, …])	# Ridge regression with built-in cross-validation.
+  linear_model.SGDClassifier([loss, penalty, …])	# Linear classifiers (SVM, logistic regression, a.o.) with SGD training.
+  linear_model.SGDRegressor([loss, penalty, …])	# Linear model fitted by minimizing a regularized empirical loss with SGD
+  linear_model.TheilSenRegressor([…])	# Theil-Sen Estimator: robust multivariate regression model.
+  linear_model.enet_path(X, y[, l1_ratio, …])	# Compute elastic net path with coordinate descent
+  linear_model.lars_path(X, y[, Xy, Gram, …])	# Compute Least Angle Regression or Lasso path using LARS algorithm [1]
+  linear_model.lasso_path(X, y[, eps, …])	# Compute Lasso path with coordinate descent
+  linear_model.lasso_stability_path(*args, …)	# DEPRECATED: The function lasso_stability_path is deprecated in 0.19 and will be removed in 0.21.
+  linear_model.logistic_regression_path(X, y)	# Compute a Logistic Regression model for a list of regularization parameters.
+  linear_model.orthogonal_mp(X, y[, …])	# Orthogonal Matching Pursuit (OMP)
+  linear_model.orthogonal_mp_gram(Gram, Xy[, …])	# Gram Orthogonal Matching Pursuit (OMP)
+  ```
 <h4 id="20">20.sklearn.manifold: 集成学习</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.manifold module implements data embedding techniques.
+
+  ```python
+  manifold.Isomap([n_neighbors, n_components, …])	# Isomap Embedding
+  manifold.LocallyLinearEmbedding([…])	# Locally Linear Embedding
+  manifold.MDS([n_components, metric, n_init, …])	# Multidimensional scaling
+  manifold.SpectralEmbedding([n_components, …])	# Spectral embedding for non-linear dimensionality reduction.
+  manifold.TSNE([n_components, perplexity, …])	# t-distributed Stochastic Neighbor Embedding.
+  manifold.locally_linear_embedding(X, …[, …])	# Perform a Locally Linear Embedding analysis on the data.
+  manifold.smacof(dissimilarities[, metric, …])	# Computes multidimensional scaling using the SMACOF algorithm.
+  manifold.spectral_embedding(adjacency[, …])	# Project the sample on the first eigenvectors of the graph Laplacian.
+  ```
 
 <h4 id="21">21.sklearn.metrics: 指标</h4>
 
-```python
-brew install 软件名
-import numpy as np
-```
+  - The sklearn.metrics module includes score functions, performance metrics and pairwise metrics and distance computations.
+  - 模型选择接口
+  ```python
+  metrics.get_scorer(scoring)	# Get a scorer from string
+  metrics.make_scorer(score_func[, …])	# Make a scorer from a performance metric or loss function.
+  ```
+  - 分类指标
+  ```python
+  metrics.accuracy_score(y_true, y_pred[, …])	# Accuracy classification score.
+  metrics.auc(x, y[, reorder])	# Compute Area Under the Curve (AUC) using the trapezoidal rule
+  metrics.average_precision_score(y_true, y_score)	# Compute average precision (AP) from prediction scores
+  metrics.brier_score_loss(y_true, y_prob[, …])	# Compute the Brier score.
+  metrics.classification_report(y_true, y_pred)	# Build a text report showing the main classification metrics
+  metrics.cohen_kappa_score(y1, y2[, labels, …])	# Cohen’s kappa: a statistic that measures inter-annotator agreement.
+  metrics.confusion_matrix(y_true, y_pred[, …])	# Compute confusion matrix to evaluate the accuracy of a classification
+  metrics.dcg_score(y_true, y_score[, k])	# Discounted cumulative gain (DCG) at rank K.
+  metrics.f1_score(y_true, y_pred[, labels, …])	# Compute the F1 score, also known as balanced F-score or F-measure
+  metrics.fbeta_score(y_true, y_pred, beta[, …])	# Compute the F-beta score
+  metrics.hamming_loss(y_true, y_pred[, …])	# Compute the average Hamming loss.
+  metrics.hinge_loss(y_true, pred_decision[, …])	# Average hinge loss (non-regularized)
+  metrics.jaccard_similarity_score(y_true, y_pred)	# Jaccard similarity coefficient score
+  metrics.log_loss(y_true, y_pred[, eps, …])	# Log loss, aka logistic loss or cross-entropy loss.
+  metrics.matthews_corrcoef(y_true, y_pred[, …])	# Compute the Matthews correlation coefficient (MCC)
+  metrics.ndcg_score(y_true, y_score[, k])	# Normalized discounted cumulative gain (NDCG) at rank K.
+  metrics.precision_recall_curve(y_true, …)	# Compute precision-recall pairs for different probability thresholds
+  metrics.precision_recall_fscore_support(…)	# Compute precision, recall, F-measure and support for each class
+  metrics.precision_score(y_true, y_pred[, …])	# Compute the precision
+  metrics.recall_score(y_true, y_pred[, …])	# Compute the recall
+  metrics.roc_auc_score(y_true, y_score[, …])	# Compute Area Under the Curve (AUC) from prediction scores
+  metrics.roc_curve(y_true, y_score[, …])	# Compute Receiver operating characteristic (ROC)
+  metrics.zero_one_loss(y_true, y_pred[, …])	# Zero-one classification loss.
+  ```
+  - 回归度量
+  ```python
+  metrics.explained_variance_score(y_true, y_pred)	Explained variance regression score function
+  metrics.mean_absolute_error(y_true, y_pred)	Mean absolute error regression loss
+  metrics.mean_squared_error(y_true, y_pred[, …])	Mean squared error regression loss
+  metrics.mean_squared_log_error(y_true, y_pred)	Mean squared logarithmic error regression loss
+  metrics.median_absolute_error(y_true, y_pred)	Median absolute error regression loss
+  metrics.r2_score(y_true, y_pred[, …])	R^2 (coefficient of determination) regression score function.
+  ```
+  - 多标签排序指标
+  ```python
+  metrics.coverage_error(y_true, y_score[, …])	Coverage error measure
+  metrics.label_ranking_average_precision_score(…)	Compute ranking-based average precision
+  metrics.label_ranking_loss(y_true, y_score)	Compute Ranking loss measure
+  ```
+  - 模型选择接口
+  ```python
+  metrics.get_scorer(scoring)	# Get a scorer from string
+  metrics.make_scorer(score_func[, …])	# Make a scorer from a performance metric or loss function.
+  ```
+  - 模型选择接口
+  ```python
+  metrics.get_scorer(scoring)	# Get a scorer from string
+  metrics.make_scorer(score_func[, …])	# Make a scorer from a performance metric or loss function.
+  ```
+  - 模型选择接口
+  ```python
+  metrics.get_scorer(scoring)	# Get a scorer from string
+  metrics.make_scorer(score_func[, …])	# Make a scorer from a performance metric or loss function.
+  ```
+
 
 <h4 id="22">22.sklearn.mixture: 高斯混合模型</h4>
 
