@@ -146,33 +146,56 @@
   >select regexp_extract('foothebar','foo(.*?)(bar)',1) from table; --the
   >select regexp_extract('foothebar','foo(.*?)(bar)',2) from table; --bar
   >select regexp_extract('foothebar','foo(.*?)(bar)',0) from table; --foothebar
-  parse_url
+  parse_url(string url,string partToExtract[,string keyToExtract])  --返回url中指定的部分
+  get_json_object(string json_string,string path) --解析json格式的字符串中path中的内容
+  space(int n) --返回长度为n的字符串
+  repeat(string str,int n) --返回重复n次后的str字符串
+  ascii(string str) --返回字符串的第一个字母的ascii码
+  lpad(string str,int len,string pad) --将str进行用pad进行左补足到len位
+  rpad(string str,int len,string pad) --将str进行用pad进行右补足到len位
+  split(string str,string pat) --按照pad字符串分割str,返回分割后的字符串数组
+  find_in_set(string str,string strList) --返回str在strList第一次出现的位置，strList是返回逗号分隔的字符串。如果没有str字符串，则返回0.
   ```
 
 <h4 id="8">8.集合统计函数</h4>
 
   ```SQL
-  brew install 软件名
-  import numpy as np
+  count() --计数
+  sum() --求和
+  avg() --平均数
+  min() --最小值
+  max() --最大值
+  var_pop() --统计结果中col非空集合的总体变量（忽略null）
+  var_samp() --统计结果集中col非空集合的样本变量（忽略null）
+  stddev_pop() --计算总体标准偏离，并返回总体变量的平方根，其返回值与vat_pop函数的平方根相同
+  stddev_samp() --计算样本标准偏离
+  percentile(Bigint col,p) --求准确的第path个百分位数，p必须介于0和1之间，但是col字段目前只支持整数，不支持浮点数据类型
+  percentile(Bigint col,array(p1,[,p2])) --返回类型是array
+  percentile_approx(Double col,p[,B]) --求近似的第pth个百分位，p必须介于0和1之间，返回类型是Double。但是col字段支持浮点类型。参数B控制内存消耗的近似精度，B越大，结果的准确度越高。
+  percentile_approx(Double col,array(p1,[,p2]...)[,B])
+  histogram_numeric(col,b) --以b为基准急速那col的直方图信息。
   ```
 
 <h4 id="9">9.复合类型构建操作</h4>
 
 ```SQL
-brew install 软件名
-import numpy as np
+map(key1,val1,key2,val2,...)  --构建map类型
+struct(val1,val2,val3,...) --构建结构体
+array(val1,val2,val3,...) --构建数组类型
 ```
 
 <h4 id="10">10.符合类型访问操作</h4>
 
 ```SQL
-brew install 软件名
-import numpy as np
+A[n] --数组Array的访问
+M[key] --Map的访问
+S.x --Struct的访问
 ```
 
 <h4 id="11">11.复杂类型长度统计函数</h4>
 
 ```SQL
-brew install 软件名
-import numpy as np
+size(Map<K.V>) --返回Map类型的长度
+size(Array<T>) --返回Array的长度
+cast(expr as <type>) --类型转换函数 返回array类型的长度
 ```
