@@ -1,4 +1,5 @@
 ### HQL基本语法
+
 ---
 <font size=4>[1.关系运算](#1)</font><br>
 <font size=4>[2.数学运算](#2)</font><br>
@@ -129,8 +130,23 @@
 <h4 id="7">7.字符串函数</h4>
 
   ```SQL
-  brew install 软件名
-  import numpy as np
+  length() --返回字符串的长度
+  reverse() --对字符串进行反转结果
+  concat(string a,string b) --串联a和b
+  concat_ws(string SEP,string A,string B...) --返回输入字符串连接后的结果，SEP表示个字符串间的分隔符
+  substr() substring() --截取字符串
+  upper() ucase() --进行大写转换
+  lower() lcase() --进行小写转换
+  trim() --除去字符串两边的空格
+  ltrim() --去除左边的空格
+  rtrim() --去除右边的空格
+  regexp_replace(string A,string B,string c)  --正则表达式替换函数
+  >
+  regexp_extract(string subject,string pattern,int index) --正则表达式解析函数 将字符串subject按照pattern正则表达式的规则拆分，返回index指定的字符串
+  >select regexp_extract('foothebar','foo(.*?)(bar)',1) from table; --the
+  >select regexp_extract('foothebar','foo(.*?)(bar)',2) from table; --bar
+  >select regexp_extract('foothebar','foo(.*?)(bar)',0) from table; --foothebar
+  parse_url
   ```
 
 <h4 id="8">8.集合统计函数</h4>

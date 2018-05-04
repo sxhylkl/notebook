@@ -41,7 +41,7 @@
     * 性能测试
     * 性能优化
 * #### HQL及Hive优化
-    * HQL语法
+    * [HQL语法](base/notes/hql_info.md)
     * Hive优化
     * 性能测试
 
