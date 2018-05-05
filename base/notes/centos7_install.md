@@ -7,8 +7,6 @@
 <font size=4>[5.安装依赖库](#5)</font><br>
 <font size=4>[6.安装python环境](#6)</font><br>
 <font size=4>[7.安装Java环境](#7)</font><br>
-<font size=4>[8.子集构造、切片、索引](#8)</font><br>
-<font size=4>[9.数组的操作](#9)</font><br>
 
 ---
 
@@ -60,20 +58,22 @@
 
 <h4 id="4">4.更新系统内核及时间同步</h4>
 
-  - 创建数组
-
-  ```python
-  brew install 软件名
-  import numpy as np
+  ```
+  date +%Z
+  cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+  ntpdate cn.pool.ntp.org
   ```
 
 <h4 id="5">5.安装依赖库</h4>
 
-  - 创建数组
-
-  ```python
-  brew install 软件名
-  import numpy as np
+  ```
+  yum -y install sudo vim
+  yum -y install zlib-devel bzip2-devel ncurses-devel openssl-devel
+  yum -y install make gcc-c++ cmake bison-devel swig patch sqlite-devel
+  yum -y install readline readline-devel rsync nload ntp ntpdate wget
+  yum -y install net-tools telnet firewalld
+  yum -y install libjpeg-devel python-devel python-setuptools
+  easy_install pip
   ```
 
 <h4 id="6">6.安装python环境</h4>
@@ -114,21 +114,3 @@
   验证是否安装成功
   java -version
   ```
-
-<h4 id="8">8.子集构造、切片、索引</h4>
-
-  - 创建数组
-
-  ```python
-  brew install 软件名
-  import numpy as np
-  ```
-
-<h4 id="9">9.数组的操作</h4>
-
-- 创建数组
-
-```python
-brew install 软件名
-import numpy as np
-```
