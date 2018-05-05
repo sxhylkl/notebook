@@ -58,7 +58,7 @@
   PasswordAuthentication yes
   ```
 
-<h4 id="4">4.帮助</h4>
+<h4 id="4">4.更新系统内核及时间同步</h4>
 
   - 创建数组
 
@@ -67,7 +67,7 @@
   import numpy as np
   ```
 
-<h4 id="5">5.数组的数学方法</h4>
+<h4 id="5">5.安装依赖库</h4>
 
   - 创建数组
 
@@ -76,22 +76,43 @@
   import numpy as np
   ```
 
-<h4 id="6">6.数组的复制</h4>
+<h4 id="6">6.安装python环境</h4>
 
-  - 创建数组
-
-  ```python
-  brew install 软件名
-  import numpy as np
+  ```
+  下载python3.6.4
+  wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+  tar -zxf Python-3.6.4.tgz
+  mkdir /usr/local/python3
+  cd Python3.6.4
+  ./configure --prefix=/usr/local/python3 --enable-optimizations
+  make
+  make install
+  ln -s /usr/local/python3/bin/python3.6 /usr/bin/python3
+  ln -s /usr/local/python3/bin/pip /usr/bin/pip3
+  cd /usr/bin
+  mv python python.bak
+  mv python3 python
+  编辑/etc/profile
+  export PATH="$PATH:/usr/local/python3/bin"
+  修改yum依赖的python
+  vi /usr/bin/yum
   ```
 
-<h4 id="7">7.数组的排序</h4>
+<h4 id="7">7.安装Java环境</h4>
 
-  - 创建数组
-
-  ```python
-  brew install 软件名
-  import numpy as np
+  ```
+  下载
+  wget http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz
+  tar -zxvf jdk-8u171-linux-x64.tar.gz
+  修改/etc/profile
+  添加
+  export JAVA_HOME=/home/soft/jdk1.8.0_171
+  export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+  export PATH=$PATH:$JAVA_HOME/bin
+  使配置文件生效
+  source /etc/profile
+  验证是否安装成功
+  java -version
   ```
 
 <h4 id="8">8.子集构造、切片、索引</h4>
