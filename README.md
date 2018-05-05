@@ -44,6 +44,10 @@
     * [HQL语法](base/notes/hql_info.md)
     * Hive优化
     * 性能测试
+* #### Linux
+    * [Centos7虚拟机安装](base/notes/centos7_install.md)
+    * Hadoop集群安装
+
 
 ##  数据分析与挖掘算法
   * 常用算法
