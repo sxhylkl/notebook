@@ -94,8 +94,10 @@
   mv python3 python
   编辑/etc/profile
   export PATH="$PATH:/usr/local/python3/bin"
-  修改yum依赖的python
+  修改yum依赖的python为python2
   vi /usr/bin/yum
+  vi /usr/libexec/urlgrabber-ext-down
+  vi /usr/bin/yum-config-manager
   ```
 
 <h4 id="7">7.安装Java环境</h4>
