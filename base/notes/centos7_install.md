@@ -7,7 +7,7 @@
 <font size=4>[5.安装依赖库](#5)</font><br>
 <font size=4>[6.安装python环境](#6)</font><br>
 <font size=4>[7.安装Java环境](#7)</font><br>
-
+<font size=4>[8.Python依赖包安装](#8)</font><br>
 ---
 
 <h4 id="1">1.虚拟机设置静态IP</h4>
@@ -114,3 +114,69 @@
   验证是否安装成功
   java -version
   ```
+
+  <h4 id="8">8.Python依赖包安装</h4>
+
+    ```
+    将pip安装列表输出到文件中
+    pip freeze >requirements.txt
+    创建pip安装列表文件
+    vi requirements.txt
+    安装
+    pip install -r requirements.txt
+    安装列表
+      autopep8
+      beautifulsoup4
+      celery
+      Django
+      Flask
+      future
+      gevent
+      ggplot
+      hive
+      impyla
+      ipython
+      jieba
+      Jinja2
+      jupyter
+      Keras
+      luigi
+      lxml
+      Mako
+      Markdown
+      matplotlib
+      multiprocess
+      nltk
+      nolearn
+      notebook
+      numba
+      numpy
+      pandas
+      PyHive
+      pymongo
+      PyMySQL
+      pyOpenSSL
+      python-daemon
+      pyzmq
+      queuelib
+      redis
+      request
+      sasl
+      scikit-learn
+      sciluigi
+      scipy
+      Scrapy
+      scrapy-redis
+      selenium
+      setuptools
+      simplegeneric
+      simplejson
+      six
+      SQLAlchemy
+      thrift
+      thrift-sasl
+      thriftpy
+      tornado
+      uuid
+      Werkzeug
+    ```
